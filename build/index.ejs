@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nenw*: Bits Collection</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    :root { --font-space: "Space Grotesk", sans-serif; }
+    body { font-family: var(--font-space); background-color: #ffffff; color: #09090b; }
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, #fafafa 1px, transparent 1px),
+        linear-gradient(to bottom, #fafafa 1px, transparent 1px);
+      mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex relative overflow-x-hidden selection:bg-black selection:text-white">
+  <div class="fixed inset-0 -z-10 bg-grid h-full w-full pointer-events-none"></div>
+
+  <main class="max-w-7xl flex flex-col mx-auto px-6 py-16 sm:py-24">
+    <header class="mb-20 space-y-6">
+      <h1 class="text-7xl font-bold tracking-tighter text-black">Bits</h1>
+      <div class="max-w-xl space-y-2">
+        <p class="text-lg text-zinc-500 font-medium leading-relaxed">
+          Curated collection of single-file micro-apps.
+        </p>
+        <p class="text-sm text-zinc-400 font-mono">
+          Press <kbd class="px-1.5 py-0.5 rounded border border-zinc-200 bg-zinc-50 text-xs font-sans text-zinc-500">Ctrl</kbd> + <kbd class="px-1.5 py-0.5 rounded border border-zinc-200 bg-zinc-50 text-xs font-sans text-zinc-500">S</kbd> to save locally.
+        </p>
+      </div>
+    </header>
+
+    <div class="flex-1">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        <% Object.entries(bits).forEach(([id, bit]) => { %>
+          <a href="./<%= id %>/" class="group block">
+            <article class="flex flex-col h-full bg-transparent">
+              <div class="aspect-[16/10] bg-zinc-50 overflow-hidden border border-zinc-200 relative mb-4 transition-all duration-300 group-hover:border-[rgba(0,0,0,.15)] group-hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,.15)] rounded">
+                <img 
+                  src="./images/<%= id %>.png" 
+                  alt="<%= bit.name %>" 
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  onerror="this.style.opacity='0'"
+                />
+                <div class="absolute inset-0 bg-zinc-100/50 -z-10"></div>
+              </div>
+
+              <div class="flex flex-col flex-1 px-1">
+                <div class="flex justify-between items-baseline mb-2">
+                  <h2 class="text-xl font-bold tracking-tight text-black decoration-2">
+                    <%= bit.name %>
+                  </h2>
+                  <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-mono border border-zinc-100 px-1.5 py-0.5 rounded-sm bg-white">
+                    <%= id %>
+                  </span>
+                </div>
+                <p class="text-sm font-sans text-zinc-500 leading-relaxed line-clamp-2">
+                  <%= bit.description %>
+                </p>
+              </div>
+            </article>
+          </a>
+        <% }); %>
+      </div>
+    </div>
+
+    <footer class="mt-32 pt-8 border-t border-zinc-100 flex justify-between items-center text-xs text-zinc-400 font-mono uppercase tracking-wider">
+      <span>bits collection &copy; 2026 nenw*</span>
+    </footer>
+
+  </main>
+</body>
+</html>

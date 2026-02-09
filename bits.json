@@ -1,0 +1,12 @@
+{
+  "drumsterr": {
+    "uri": "gist:HelloWorld017/f93758d534b3115115189fe1a924374e/drumsterr.html",
+    "name": "Drumsterr",
+    "description": "Convert your Songsterr GuitarPro (*.gp) files suitable for Musescore Editing."
+  },
+  "vehlog": {
+    "uri": "github:HelloWorld017/vehlog/master/index.html",
+    "name": "Vehlog",
+    "description": "Simple car log manager"
+  }
+}

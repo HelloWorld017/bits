@@ -1,0 +1,22 @@
+{
+  "name": "bits",
+  "version": "1.0.0",
+  "description": "A collection of single-html web app",
+  "main": "bits.json",
+  "type": "module",
+  "scripts": {
+    "build": "node build/build.ts"
+  },
+  "author": "nenw <khi@nenw.dev>",
+  "license": "MIT",
+  "packageManager": "pnpm@10.18.3",
+  "devDependencies": {
+    "@types/node": "^25.2.2",
+    "browserslist": "^4.28.1",
+    "ejs": "^4.0.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/ejs": "^3.1.5"
+  }
+}
