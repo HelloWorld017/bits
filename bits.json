@@ -9,6 +9,11 @@
     "name": "Science Tokyo OTL",
     "description": "A timetable editor for Science Tokyo 2026 3Q/4Q."
   },
+  "playstamp": {
+    "uri": "gist:HelloWorld017/bd103e4eb07cd6aae4d98e0bc6ff5714/playstamp.html",
+    "name": "Playstamp",
+    "description": "A journaling tool for Spotify playlist."
+  },
   "vehlog": {
     "uri": "github:HelloWorld017/vehlog/master/index.html",
     "name": "Vehlog",
