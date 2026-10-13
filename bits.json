@@ -4,6 +4,11 @@
     "name": "Drumsterr",
     "description": "Convert your Songsterr GuitarPro (*.gp) files suitable for Musescore Editing."
   },
+  "isctotl": {
+    "uri": "gist:HelloWorld017/a71f2d66227d23c289a5a2138b8fb2c8/sciencetokyo_otl.html",
+    "name": "Science Tokyo OTL",
+    "description": "A timetable editor for Science Tokyo 2026 3Q/4Q."
+  },
   "vehlog": {
     "uri": "github:HelloWorld017/vehlog/master/index.html",
     "name": "Vehlog",
