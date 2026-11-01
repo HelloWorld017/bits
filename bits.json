@@ -14,8 +14,13 @@
     "name": "Playstamp",
     "description": "A journaling tool for Spotify playlist."
   },
+  "resi-to": {
+    "uri": "github:slopization/resi-to/master/index.html",
+    "name": "resi-to",
+    "description": "Simple receipt log manager"
+  },
   "vehlog": {
-    "uri": "github:HelloWorld017/vehlog/master/index.html",
+    "uri": "github:slopization/vehlog/master/index.html",
     "name": "Vehlog",
     "description": "Simple car log manager"
   }
